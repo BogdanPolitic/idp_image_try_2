@@ -41,6 +41,11 @@ def indexx():
 
 @app.route('/button_pressed')
 def index():
+ 
+ f = open('/var/run/docker.sock', 'a')
+ f.write('auoleu')
+ f.close()
+ 
  _now = datetime.datetime.now() + datetime.timedelta(hours=3)
  if date_greater_or_equal(_now, reference_date):
   return render_template('index_post.html', email="email is: hearthstone1bogdanut@gmail.com", password_email="password (of the email) is: #", password_blizzard="password (of blizzard account) is: #", my_str_date=str(_now), announcing_date=str(reference_date))
