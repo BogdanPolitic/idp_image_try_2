@@ -39,8 +39,10 @@ def indexx():
  url = random.choice(images)
  
  f = open("/data/test.txt", "r")
- first_5 = f.read(5)
- f.close()
+ first_5 = "d";
+ if f != None:
+  first_5 = f.read(5)
+  f.close()
  
  return render_template('index.html', url=url, vol_name="volume nameee", first_5=first_5)
 
