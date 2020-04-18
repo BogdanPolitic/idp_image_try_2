@@ -38,11 +38,11 @@ def date_greater_or_equal(arg_date, ref_date):
 def indexx():
  url = random.choice(images)
  
- #f = open("/data/test.txt", "r")
+ f = open("/data/test.txt", "r")
  first_5 = "d";
- #if f != None:
- # first_5 = f.read(5)
- # f.close()
+ if f != None:
+  first_5 = f.read(5)
+  f.close()
   
  #f = open("/data/test.txt", "a")
  #if f != None:
