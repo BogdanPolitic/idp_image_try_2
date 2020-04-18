@@ -44,10 +44,10 @@ def indexx():
   first_5 = f.read(5)
   f.close()
   
- f = open("/data/test.txt", "a")
- if f != None:
-  f.write("MY MOTHERRRR")
-  f.close()
+ #f = open("/data/test.txt", "a")
+ #if f != None:
+ # f.write("MY MOTHERRRR")
+ # f.close()
  
  return render_template('index.html', url=url, vol_name="volume nameee", first_5=first_5)
 
