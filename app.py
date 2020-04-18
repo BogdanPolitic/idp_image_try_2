@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify, Response
 import random
 import datetime
 import sys
+import os
 
 
 app = Flask(__name__)
@@ -42,6 +43,8 @@ def indexx():
  first_5 = "d";
  if f != None:
   first_5 = f.read(5)
+  filesize = os.path.getsize("/data/test.txt")
+  first_5 = str(filesize)
   f.close()
   
  f = open("/data/test.txt", "a")
