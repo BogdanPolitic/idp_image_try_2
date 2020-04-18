@@ -12,14 +12,14 @@ services:
                 condition: on-failure
         ports:
            - "8888:5000"
+        volumes:
+            - "~/my_dir/data:/data"
         networks:
           - webnet
     visualizer:
         image: dockersamples/visualizer:stable
         ports:
             - "8080:8080"
-        volumes:
-            - "~/my_dir/data:/data"
         deploy:
             placement:
                 constraints: [node.role == manager]
