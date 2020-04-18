@@ -19,7 +19,7 @@ services:
         ports:
             - "8080:8080"
         volumes:
-            - "/test/helloo.txt"
+            - "~/my_dir/data:/data"
         deploy:
             placement:
                 constraints: [node.role == manager]
