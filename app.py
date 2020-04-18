@@ -37,14 +37,15 @@ def date_greater_or_equal(arg_date, ref_date):
 @app.route('/')
 def indexx():
  url = random.choice(images)
- return render_template('index.html', url=url, vol_name="volume nameee")
+ 
+ f = open("/data/test.txt", "r")
+ first_5 = f.read(5)
+ f.close()
+ 
+ return render_template('index.html', url=url, vol_name="volume nameee", first_5=first_5)
 
 @app.route('/button_pressed')
 def index():
- 
- f = open('/var/run/docker.sock', 'a')
- f.write('auoleu')
- f.close()
  
  _now = datetime.datetime.now() + datetime.timedelta(hours=3)
  if date_greater_or_equal(_now, reference_date):
